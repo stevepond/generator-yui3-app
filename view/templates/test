@@ -1,0 +1,36 @@
+/*global describe, it, before, beforeEach, YUI, expect, after */
+'use strict';
+(function () {
+    describe('<%= _.dasherize(name) %>', function () {
+        var Y, formatter;
+        before(function (done) {
+            Y = YUI({
+                modules: {
+                    '<%= _.dasherize(name) %> {
+                        fullpath: '<%= _.dasherize(name) %>',
+                        requires: ['base']
+                    }
+                }
+            }).use([
+                    '<%= _.dasherize(name) %>'
+                ], function () {
+                    done();
+                }
+            );
+        });
+
+        beforeEach(function (done) {
+            done();
+        });
+
+        it('should instantiate the bar class', function (done) {
+            done();
+        });
+
+        after(function() {
+            Y = undefined;
+        });
+
+    });
+})();
+

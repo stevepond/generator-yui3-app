@@ -1,0 +1,50 @@
+/* global YUI */
+'use strict';
+YUI.add('<%= _.dasherize(name) %>', function (Y) {
+    Y.PieView = Y.Base.create('<%= name %>', Y.View, [], {
+        events: {
+            '.eat': {click: 'eatSlice'}
+        },
+
+        template: '{slices} slice(s) of {type} pie remaining. ' +
+                '<button class="eat">Eat a Slice!</button>',
+
+        initializer: function () {
+            var model = this.get('model');
+
+            model.after('change', this.render, this);
+            model.after('destroy', this.destroy, this);
+        },
+
+        render: function () {
+            var container = this.get('container'),
+                html      = Y.Lang.sub(this.template, this.get('model').toJSON());
+
+            container.setHTML(html);
+
+            if (!container.inDoc()) {
+                Y.one('body').append(container);
+            }
+
+            return this;
+        },
+
+        eatSlice: function () {
+            this.get('model').eatSlice();
+        }
+    },
+    {
+
+        ATTRS: {
+            container: {
+                valueFn: function () {
+                    return Y.Node.create('<div class="pie"/>');
+                }
+            }
+        }
+    }
+);
+}, '0.0.1', {
+    requires: []
+});
+
