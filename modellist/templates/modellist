@@ -1,0 +1,11 @@
+'use strict';
+YUI.add('<%= _.dasherize(name) %>', function (Y) {
+    Y.<%=name %> = Y.Base.create('<%= _.dasherize(name) %>', Y.ModelList, [], {
+    },
+    {
+        ATTRS: {
+        }
+    });
+}, '0.0.1', {
+    requires: []
+});
