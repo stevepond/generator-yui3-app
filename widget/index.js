@@ -13,5 +13,8 @@ var WidgetGenerator = module.exports = function WidgetGenerator(args, options, c
 util.inherits(WidgetGenerator, yeoman.generators.NamedBase);
 
 WidgetGenerator.prototype.files = function files() {
-  this.copy('somefile.js', 'somefile.js');
+    var filename = 'app/scripts/widgets/' + this.name + '' + '.js';
+    var filenameTest = 'test/widgets/' + this.name + '' + '.js';
+    this.template('widget', filename);
+    this.template('test', filenameTest);
 };

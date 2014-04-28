@@ -1,0 +1,39 @@
+/* global YUI */
+'use strict';
+YUI.add( '<%= _.dasherize(name) %>', function(Y) {
+
+    /* MXD_filter_widget class constructor */
+    function <%= _.classify(name) %>Ctr(config) {
+        <%= _.classify(name) %>Ctr.superclass.constructor.apply(this, arguments);
+    }
+
+    <%= _.classify(name) %>Ctr.NAME = '<%= _.classify(name) %>';
+
+    <%= _.classify(name) %>Ctr.ATTRS = {
+        foo: {
+            value: {}
+        }
+    };
+
+    <%= _.classify(name) %>Ctr.HTML_PARSER = {
+        foos: function(srcNode) {
+            return srcNode.get("innerHTML").split(',');
+        }
+    };
+
+     <%= _.classify(name) %> =
+        Y.extend(<%=name %>Ctr, Y.Widget, {
+
+            initializer: function(cfg) {
+            },
+
+            destructor: function() {
+            },
+
+            bindUI: function() {
+            },
+
+            renderUI: function() {
+            },
+    });
+}, "@VERSION@" );
