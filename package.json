@@ -1,7 +1,7 @@
 {
   "name": "generator-yui3-app",
   "version": "0.0.0",
-  "description": "A generator for Yeoman",
+  "description": "A generator for YUI3 apps.  Includes Submodules for View, Model, ModelList, and Widget",
   "keywords": [
     "yeoman-generator"
   ],
