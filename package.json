@@ -1,6 +1,6 @@
 {
   "name": "generator-yui3-app",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A generator for YUI3 apps.  Includes Submodules for View, Model, ModelList, and Widget",
   "keywords": [
     "yeoman-generator"
@@ -8,7 +8,7 @@
   "homepage": "https://github.com/sapond/generator-yui3-app",
   "bugs": "https://github.com/sapond/generator-yui3-app/issues",
   "author": {
-    "name": "Stephen Pond",
+    "name": "Steve Pond",
     "email": "sapond@gmail.com",
     "url": "https://github.com/sapond"
   },

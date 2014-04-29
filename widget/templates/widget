@@ -20,8 +20,9 @@ YUI.add( '<%= _.dasherize(name) %>', function(Y) {
         }
     };
 
-     <%= _.classify(name) %> =
-        Y.extend(<%=name %>Ctr, Y.Widget, {
+    //TODO use namespacing
+     window.<%= _.classify(name) %> =
+        Y.extend(<%= _.classify(name) %>Ctr, Y.Widget, {
 
             initializer: function(cfg) {
             },
