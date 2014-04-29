@@ -2,7 +2,6 @@
 'use strict';
 YUI.add( '<%= _.dasherize(name) %>', function(Y) {
 
-    /* MXD_filter_widget class constructor */
     function <%= _.classify(name) %>Ctr(config) {
         <%= _.classify(name) %>Ctr.superclass.constructor.apply(this, arguments);
     }
@@ -30,10 +29,16 @@ YUI.add( '<%= _.dasherize(name) %>', function(Y) {
             destructor: function() {
             },
 
+            renderUI: function() {
+            },
+
             bindUI: function() {
             },
 
-            renderUI: function() {
-            },
+            syncUI: function() {
+
+            }
+
+
     });
 }, "@VERSION@" );
